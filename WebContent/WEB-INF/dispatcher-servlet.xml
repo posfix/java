@@ -3,11 +3,7 @@
 		xmlns="http://www.springframework.org/schema/beans"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xmlns:p="http://www.springframework.org/schema/p"
-		xmlns:aop="http://www.springframework.org/schema/aop"
-		xmlns:tx="http://www.springframework.org/schema/tx"
-		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
-       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans"
 >
 
 	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
@@ -24,6 +20,7 @@
 				<prop key="three_d_result_fail.htm">ThreeDResultFailController</prop>
 				<prop key="preauth.htm">PreAuthController</prop>
 				<prop key="three_d_result_success.htm">ThreeDResultSuccessController</prop>
+				<prop key="postauth.htm">PostAuthController</prop>
 				<prop key="bin_inquiry.htm">BinInquiryController</prop>
 				<prop key="bin_inquiry_v4.htm">BinInquiryV4Controller</prop>
 				<prop key="api_payment.htm">ApiPaymentController</prop>
@@ -70,6 +67,11 @@
 			name="ThreeDResultSuccessController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
 			p:viewName="three_d_result_success" />
+
+	<bean
+			name="PostAuthController"
+			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+			p:viewName="postauth" />
 
 	<bean
 			name="BinInquiryController"
