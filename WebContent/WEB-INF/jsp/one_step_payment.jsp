@@ -278,7 +278,7 @@
 
     String form = dto.execute(dto, settings); // "3D secure Tek adımlı ödeme yapma servis çağrısının yapıldığı kısımdır."
     out.println(form);
-     //"3D secure Tek adımlınödeme yapma servis çağırısı sonucunda servis çıktı parametrelerinin ekranda gösterildiği kısımdır."
+     //"3D secure Tek adımlı ödeme yapma servis çağırısı sonucunda servis çıktı parametrelerinin ekranda gösterildiği kısımdır."
   }
 %>
 
