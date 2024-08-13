@@ -192,7 +192,7 @@
 		preAuthRequest.orderId = uuid.toString();
 		preAuthRequest.echo = "Echo";
 		preAuthRequest.mode = settings.mode;
-		preAuthRequest.amount = "10000"; // 100 tL
+		preAuthRequest.amount = "100"; // 100 tL
 		preAuthRequest.cardOwnerName = request.getParameter("nameSurname");
 		preAuthRequest.cardNumber = request.getParameter("cardNumber");
 		preAuthRequest.cardExpireMonth = request.getParameter("month");
