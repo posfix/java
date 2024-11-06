@@ -55,7 +55,7 @@
 		completeRequest.orderId = request.getParameter("orderId");
 		completeRequest.echo = "Echo";
 		completeRequest.mode = settings.mode;
-		completeRequest.amount = "10000"; // 100 tL
+		completeRequest.amount = "100"; // 100 tL
 		completeRequest.cardOwnerName = "Fatih Coşkun";
 		completeRequest.cardNumber = "4662803300111364";
 		completeRequest.cardExpireMonth = "10";

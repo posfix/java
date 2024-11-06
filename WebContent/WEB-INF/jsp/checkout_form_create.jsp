@@ -122,7 +122,7 @@
         UUID uuid = UUID.randomUUID();
 
         dto.setOrderId(uuid.toString());
-        dto.setAmount(100);
+        dto.setAmount(100D);
         dto.setCallbackUrl("https://api.posfix.com.tr/rest/payment/threed/test/result");
         dto.setThreed(false);
 
