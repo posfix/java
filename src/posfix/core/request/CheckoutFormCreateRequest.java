@@ -146,11 +146,11 @@ public class CheckoutFormCreateRequest extends CoreRequest {
         settings.transactionDate = Helper.getTransactionDateString();
         settings.hashString = settings.privateKey
                 + request.mode
-                + request.getPurchaser().getName()
-                + request.getPurchaser().getSurname()
-                + request.getPurchaser().getEmail()
+                + request.purchaser.name
+                + request.purchaser.surname
+                + request.purchaser.email
                 + request.transactionDate;
-        return RestHttpCaller.getInstance().postJson(settings.baseUrl + "rest/checkoutForm/create",
+            return RestHttpCaller.getInstance().postJson(settings.baseUrl + "rest/checkoutForm/create",
                 Helper.getHttpHeaders(settings, Constants.ContentTypes.APPLICATION_JSON_UTF8),
                 request, CheckoutFormCreateResponse.class);
     }

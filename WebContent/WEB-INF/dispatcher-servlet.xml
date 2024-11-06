@@ -22,6 +22,7 @@
 			<props>
 				<!--<prop key="index.htm">IndexController</prop>-->
 				<prop key="three_d_result_fail.htm">ThreeDResultFailController</prop>
+				<prop key="preauth.htm">PreAuthController</prop>
 				<prop key="three_d_result_success.htm">ThreeDResultSuccessController</prop>
 				<prop key="bin_inquiry.htm">BinInquiryController</prop>
 				<prop key="bin_inquiry_v4.htm">BinInquiryV4Controller</prop>
@@ -59,6 +60,11 @@
 			name="ThreeDResultFailController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
 			p:viewName="three_d_result_fail" />
+
+	<bean
+			name="PreAuthController"
+			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+			p:viewName="preauth" />
 
 	<bean
 			name="ThreeDResultSuccessController"
