@@ -196,7 +196,7 @@
 		apiPaymentRequest.orderId = uuid.toString();
 		apiPaymentRequest.echo = "Echo";
 		apiPaymentRequest.mode = settings.mode;
-		apiPaymentRequest.amount = "10000"; // 100 tL
+		apiPaymentRequest.amount = "100"; // 100 tL
 		apiPaymentRequest.cardOwnerName = request.getParameter("nameSurname");
 		apiPaymentRequest.cardNumber = request.getParameter("cardNumber");
 		apiPaymentRequest.cardExpireMonth = request.getParameter("month");

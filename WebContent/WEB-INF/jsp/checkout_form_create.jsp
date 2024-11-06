@@ -86,10 +86,10 @@
         </legend>
         <!-- Text input-->
         <label style="font-weight: bold;">Threed :</label> false<br>
-        <label style="font-weight: bold;">Amount :</label> 100000<br>
+        <label style="font-weight: bold;">Amount :</label> 100<br>
         <label style="font-weight: bold;">Allowed Installments :</label> 1,2,3,4,5,6,7,8,9,10,11,12<br>
         <label style="font-weight: bold;">CallbackUrl :</label>
-        https://apitest.posfix.com.tr/rest/payment/threed/test/result<br>
+        https://api.posfix.com.tr/rest/payment/threed/test/result<br>
     </fieldset>
 
     <!-- Button -->
@@ -122,8 +122,8 @@
         UUID uuid = UUID.randomUUID();
 
         dto.setOrderId(uuid.toString());
-        dto.setAmount(10000D);
-        dto.setCallbackUrl("https://apitest.posfix.com.tr/rest/payment/threed/test/result");
+        dto.setAmount(100);
+        dto.setCallbackUrl("https://api.posfix.com.tr/rest/payment/threed/test/result");
         dto.setThreed(false);
 
         dto.setAllowedInstallments(new HashSet<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12")));

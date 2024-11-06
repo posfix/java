@@ -80,7 +80,7 @@ Test kartlarımızda alınan hata kodları ve çözümleriyle ilgili detaylı bi
         UUID uuid = UUID.randomUUID();
 
         oneStepPaymentRequest.setOrderId(uuid.toString());
-        oneStepPaymentRequest.setAmount("10000");
+        oneStepPaymentRequest.setAmount("100");
         oneStepPaymentRequest.setCardOwnerName("Ahmet Veli");
         oneStepPaymentRequest.setCardNumber("5456165456165454");
         oneStepPaymentRequest.setCardExpireMonth("12");
