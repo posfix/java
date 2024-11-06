@@ -24,6 +24,7 @@
 				<prop key="three_d_result_fail.htm">ThreeDResultFailController</prop>
 				<prop key="preauth.htm">PreAuthController</prop>
 				<prop key="three_d_result_success.htm">ThreeDResultSuccessController</prop>
+				<prop key="postauth.htm">PostAuthController</prop>
 				<prop key="bin_inquiry.htm">BinInquiryController</prop>
 				<prop key="bin_inquiry_v4.htm">BinInquiryV4Controller</prop>
 				<prop key="api_payment.htm">ApiPaymentController</prop>
