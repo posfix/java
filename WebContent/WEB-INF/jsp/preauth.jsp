@@ -179,12 +179,11 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
-	/* 3D secure olmadan ödeme işlemleri için gerekli olan parametrelerin doldurulduğu kısımdır. setting ayarlarımızı alıp, ApiPaymentRequest alanlarının formdan gelen verilere göre doldurup post edildiği kısımdır.
+	/* Ön Otorizasyon Açma için gerekli olan parametrelerin doldurulduğu kısımdır. setting ayarlarımızı alıp, PreAuthRequest alanlarının formdan gelen verilere göre doldurup post edildiği kısımdır.
 	  Post işlemi sonucunda oluşan sonucu ekranda gösteriyoruz.
 	*/
 
 	if ("POST".equalsIgnoreCase(request.getMethod())) {
-
 		Settings settings = new Settings();
 
 		PreAuthRequest preAuthRequest = new PreAuthRequest();
@@ -245,12 +244,12 @@
 		product1.quantity = "1";
 		preAuthRequest.products.add(product1);
 
-		PreAuthResponse preAuthResponse = PreAuthRequest.execute(preAuthRequest, settings); // "3D secure olmadan ödeme yapma servis çağrısının yapıldığı kısımdır."
+		PreAuthResponse preAuthResponse = PreAuthRequest.execute(preAuthRequest, settings); // "Ön Otorizasyon Açma servis çağrısının yapıldığı kısımdır."
 
 		Gson g = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
 		out.println("  <h1>Sonuç</h1>");
 
-		out.println("<pre>" + g.toJson(preAuthResponse) + "</pre>");//"3D secure olmadan ödeme yapma servis çağırısı sonucunda servis çıktı parametrelerinin ekranda gösterildiği kısımdır."
+		out.println("<pre>" + g.toJson(preAuthResponse) + "</pre>");//"Ön Otorizasyon Açma servis çağırısı sonucunda servis çıktı parametrelerinin ekranda gösterildiği kısımdır."
 	}
 %>
 

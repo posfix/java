@@ -11,7 +11,6 @@
 
 <jsp:include page="layout.jsp" />
 
-
 <form
 		method="post"
 		class="form-horizontal"
@@ -71,7 +70,7 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
-	/* 3D secure olmadan ödeme işlemleri için gerekli olan parametrelerin doldurulduğu kısımdır. setting ayarlarımızı alıp, ApiPaymentRequest alanlarının formdan gelen verilere göre doldurup post edildiği kısımdır.
+	/* Ön Otorizasyon Kapama için gerekli olan parametrelerin doldurulduğu kısımdır. setting ayarlarımızı alıp, PostAuthRequest alanlarının formdan gelen verilere göre doldurup post edildiği kısımdır.
 	  Post işlemi sonucunda oluşan sonucu ekranda gösteriyoruz.
 	*/
 
@@ -87,12 +86,12 @@
 		postAuthRequest.clientIp = "127.0.0.1";
 
 
-		PostAuthResponse postAuthResponse = PostAuthRequest.execute(postAuthRequest, settings); // "3D secure olmadan ödeme yapma servis çağrısının yapıldığı kısımdır."
+		PostAuthResponse postAuthResponse = PostAuthRequest.execute(postAuthRequest, settings); // "Ön Otorizasyon Kapama servis çağrısının yapıldığı kısımdır."
 
 		Gson g = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
 		out.println("  <h1>Sonuç</h1>");
 
-		out.println("<pre>" + g.toJson(postAuthResponse) + "</pre>");//"3D secure olmadan ödeme yapma servis çağırısı sonucunda servis çıktı parametrelerinin ekranda gösterildiği kısımdır."
+		out.println("<pre>" + g.toJson(postAuthResponse) + "</pre>");//"Ön Otorizasyon Kapama servis çağırısı sonucunda servis çıktı parametrelerinin ekranda gösterildiği kısımdır."
 	}
 %>
 
