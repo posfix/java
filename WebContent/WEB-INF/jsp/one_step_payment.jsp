@@ -248,8 +248,8 @@
             + request.getContextPath()
             + "/";
 
-    dto.setSuccessUrl("https://apitest.posfix.com.tr/rest/payment/threed/test/result");
-    dto.setFailureUrl("https://apitest.posfix.com.tr/rest/payment/threed/test/result");
+    dto.setSuccessUrl("https://api.posfix.com.tr/rest/payment/threed/test/result");
+    dto.setFailureUrl("https://api.posfix.com.tr/rest/payment/threed/test/result");
     dto.setEcho("Echo");
     dto.setVersion("1.0");
     dto.setDeviceUUId("android-20013fea6bcc820c");
@@ -278,7 +278,7 @@
 
     String form = dto.execute(dto, settings); // "3D secure Tek adımlı ödeme yapma servis çağrısının yapıldığı kısımdır."
     out.println(form);
-     //"3D secure Tek adımlınödeme yapma servis çağırısı sonucunda servis çıktı parametrelerinin ekranda gösterildiği kısımdır."
+     //"3D secure Tek adımlı ödeme yapma servis çağırısı sonucunda servis çıktı parametrelerinin ekranda gösterildiği kısımdır."
   }
 %>
 

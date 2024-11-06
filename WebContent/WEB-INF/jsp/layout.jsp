@@ -1,7 +1,3 @@
-<%@page import="java.util.UUID"%>
-<%@page import="java.io.PrintWriter"%>
-<%@page import="posfix.core.Settings"%>
-<%@page import="posfix.core.request.*"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -44,7 +40,9 @@
 				/>
 				<ul class="nav navbar-nav">
 					<li><a href="one_step_payment.htm">Tek Adımda 3D Ödeme</a></li>
+					<li><a href="preauth.htm">Ön Otorizasyon Açma</a></li>
 					<li><a href="api_payment.htm">(Non-3d) Ödeme</a></li>
+					<li><a href="postauth.htm">Ön Otorizasyon Kapatma</a></li>
 					<li><a href="payment_inqury.htm">Ödeme Sorgulama</a></li>
 					<li><a href="payment_inqury_with_time.htm">Ödeme Sorgulama(Tarih Aralığında)</a></li>
 					<li><a href="payment_refund_inquiry.htm">İade Sorgulama</a></li>
@@ -67,3 +65,4 @@
 	</div>
 	<div class="container body-content">
 		<br /> <br/> <br/>
+	</div>

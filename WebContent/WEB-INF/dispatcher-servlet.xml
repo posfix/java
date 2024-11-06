@@ -3,14 +3,11 @@
 		xmlns="http://www.springframework.org/schema/beans"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xmlns:p="http://www.springframework.org/schema/p"
-		xmlns:aop="http://www.springframework.org/schema/aop"
-		xmlns:tx="http://www.springframework.org/schema/tx"
-		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
-       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
+
 >
 
-	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
 
 	<!-- Most controllers will use the ControllerClassNameHandlerMapping above, but for the index controller we are using ParameterizableViewController,
 		so we must define an explicit mapping for it. -->
@@ -22,7 +19,9 @@
 			<props>
 				<!--<prop key="index.htm">IndexController</prop>-->
 				<prop key="three_d_result_fail.htm">ThreeDResultFailController</prop>
+				<prop key="preauth.htm">PreAuthController</prop>
 				<prop key="three_d_result_success.htm">ThreeDResultSuccessController</prop>
+				<prop key="postauth.htm">PostAuthController</prop>
 				<prop key="bin_inquiry.htm">BinInquiryController</prop>
 				<prop key="bin_inquiry_v4.htm">BinInquiryV4Controller</prop>
 				<prop key="api_payment.htm">ApiPaymentController</prop>
@@ -47,7 +46,7 @@
 			id="viewResolver"
 			class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 			p:prefix="/WEB-INF/jsp/"
-			p:suffix=".jsp" />
+			p:suffix=".jsp"/>
 
 	<!-- The index controller. -->
 	<!--<bean
@@ -58,40 +57,50 @@
 	<bean
 			name="ThreeDResultFailController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="three_d_result_fail" />
+			p:viewName="three_d_result_fail"/>
+
+	<bean
+			name="PreAuthController"
+			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+			p:viewName="preauth"/>
 
 	<bean
 			name="ThreeDResultSuccessController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="three_d_result_success" />
+			p:viewName="three_d_result_success"/>
+
+	<bean
+			name="PostAuthController"
+			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+			p:viewName="postauth"/>
 
 	<bean
 			name="BinInquiryController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="bin_inquiry" />
+			p:viewName="bin_inquiry"/>
 
 	<bean
 			name="BinInquiryV4Controller"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="bin_inquiry_v4" />
+			p:viewName="bin_inquiry_v4"/>
 
 	<bean
 			name="ApiPaymentController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="api_payment" />
+			p:viewName="api_payment"/>
 
 	<bean
 			name="OneStepPaymentController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="one_step_payment" />
+			p:viewName="one_step_payment"/>
 	<bean
 			name="CreateLinkPaymentController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="create_link_payment" />
+			p:viewName="create_link_payment"/>
 	<bean
 			name="LinkPaymentListController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="link_payment_list" />
+			p:viewName="link_payment_list"/>
 
 	<bean
 			name="PaymentRefundInquiry"
@@ -105,41 +114,41 @@
 	<bean
 			name="LinkPaymentDeleteController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="link_payment_delete" />
+			p:viewName="link_payment_delete"/>
 
 	<bean
 			name="CheckoutFormCreateController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="checkout_form_create" />
+			p:viewName="checkout_form_create"/>
 
 	<bean
 			name="PaymentInquryController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="payment_inqury" />
+			p:viewName="payment_inqury"/>
 
 	<bean
 			name="PaymentInquryWithTimeController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="payment_inqury_with_time" />
+			p:viewName="payment_inqury_with_time"/>
 
 	<bean
 			name="AddCardToWalletController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="add_card_to_wallet" />
+			p:viewName="add_card_to_wallet"/>
 
 	<bean
 			name="GetCardFromWalletController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="get_card_from_wallet" />
+			p:viewName="get_card_from_wallet"/>
 
 	<bean
 			name="DeleteCardFromWalletController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="delete_card_from_wallet" />
+			p:viewName="delete_card_from_wallet"/>
 
 	<bean
 			name="ApiPaymentWithWalletController"
 			class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-			p:viewName="api_payment_with_wallet" />
+			p:viewName="api_payment_with_wallet"/>
 
 </beans>

@@ -40,6 +40,9 @@ public class Settings{
 PosFix örnek projelerinin amacı, yazılım geliştiricilere PosFix servislerine entegre olabilecek bir proje örneği sunmak ve entegrasyon adımlarının daha iyi anlaşılmasını sağlamaktır.
 Projeleri doğrudan canlı ortamınıza alarak kod değişimi yapmadan kullanmanız için desteğimiz bulunmamaktadır. **Projeyi bir eğitsel kaynak (tutorial) olarak kullanınız.**
 
+### Gerekli Teknolojiler
+* Java 8
+
 ### Test Kartları
 Başarılı bir ödemeyi test etmek için aşağıdaki kart numaralarını ve diğer bilgileri kullanabilirsiniz.
 
@@ -77,7 +80,7 @@ Test kartlarımızda alınan hata kodları ve çözümleriyle ilgili detaylı bi
         UUID uuid = UUID.randomUUID();
 
         oneStepPaymentRequest.setOrderId(uuid.toString());
-        oneStepPaymentRequest.setAmount("10000");
+        oneStepPaymentRequest.setAmount("100");
         oneStepPaymentRequest.setCardOwnerName("Ahmet Veli");
         oneStepPaymentRequest.setCardNumber("5456165456165454");
         oneStepPaymentRequest.setCardExpireMonth("12");
